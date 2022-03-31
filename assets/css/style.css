@@ -10064,6 +10064,9 @@ header.home-header {
     background-image: none;
     background-color: #BA2625;
   }
+  header.home-header .menu-wrapper {
+    display: none;
+  }
 }
 header.home-header .nav-popup-toggle #bruna-agency {
   fill: #ffffff;

@@ -14,9 +14,14 @@ header.home-header {
         background-position: top;
         background-image:none;
         background-color:#BA2625 ;
+
+        .menu-wrapper {
+            display: none;
+        }
     }
 
-    .nav-popup-toggle #bruna-agency {
+
+        .nav-popup-toggle #bruna-agency {
         fill: $white;
     }
 
