@@ -10020,8 +10020,7 @@ h3 {
 
 @font-face {
   font-family: "Caviar";
-  src: url("/assets/fonts/webfonts/CaviarDreams-webfont.eot");
-  src: url("/assets/fonts/webfonts/CaviarDreams-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/webfonts/CaviarDreams-webfont.woff2") format("woff2"), url("/assets/fonts/webfonts/CaviarDreams-webfont.woff") format("woff"), url("/assets/fonts/webfonts/CaviarDreams-webfont.ttf") format("truetype"), url("/assets/fonts/webfonts/CaviarDreams-webfont.svg#Caviar") format("svg");
+  src: url("/assets/fonts/webfonts/CaviarDreams-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
