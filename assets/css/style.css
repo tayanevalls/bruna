@@ -10019,9 +10019,9 @@ h3 {
 }
 
 @font-face {
-  font-family: "Caviar Dreams";
-  src: url("/assets/fonts/CaviarDreams-webfont.eot?5dqoim");
-  src: url("/assets/fonts/CaviarDreams-webfont.eot?5dqoim#iefix") format("embedded-opentype"), url("/assets/fonts/CaviarDreams-webfont.ttf?5dqoim") format("truetype"), url("/assets/fonts/CaviarDreams-webfont.woff?5dqoim") format("woff"), url("/assets/fonts/CaviarDreams-webfont.svg?5dqoim#Caviar Dreams") format("svg");
+  font-family: "Caviar";
+  src: url("/assets/fonts/webfonts/CaviarDreams-webfont.eot");
+  src: url("/assets/fonts/webfonts/CaviarDreams-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/webfonts/CaviarDreams-webfont.woff2") format("woff2"), url("/assets/fonts/webfonts/CaviarDreams-webfont.woff") format("woff"), url("/assets/fonts/webfonts/CaviarDreams-webfont.ttf") format("truetype"), url("/assets/fonts/webfonts/CaviarDreams-webfont.svg#Caviar") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -10055,7 +10055,7 @@ header.home-header {
   background-color: #BA2625;
   background-size: cover;
   background-position: center;
-  font-family: "Caviar Dreams";
+  font-family: "Caviar";
   color: #ffffff;
 }
 @media (max-width: 767px) {
