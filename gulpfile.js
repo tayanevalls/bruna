@@ -1,81 +1,57 @@
 const gulp = require('gulp');
-const autoprefixer = require("autoprefixer");
-const browsersync = require("browser-sync").create();
-const cssnano    = require("cssnano");
-const plumber = require("gulp-plumber");
-const postcss = require("gulp-postcss");
-const rename = require("gulp-rename");
-const sass = require("gulp-sass");
-var merge = require('merge-stream');
-var sourcemaps = require("gulp-sourcemaps");
+const sass = require('gulp-sass')(require('sass'));
+const sourceMaps = require('gulp-sourcemaps');
+const autoprefixer = require('gulp-autoprefixer');
+const browserSync = require('browser-sync');
+const del = require('del');
 
-function browserSync(done) {
-    browsersync.init({
-      server: {
-        baseDir: "./"
-      },
-      port: 3000
+//SCSS compilation
+
+function style() {
+    return gulp.src('./assets/scss/*.scss')
+    .pipe(sourceMaps.init())
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(sourceMaps.write('./'))
+    .pipe(gulp.dest('./assets/css'))
+    .pipe(browserSync.stream());
+}
+
+function watch() {
+    browserSync.init({
+        server: {
+            baseDir: './',
+        },
+        startPath: 'index.html',
+        ghostMode: false,
+        notify: false
     });
-    done();
-  }
+    style();
+    gulp.watch('./assets/scss/**/*.scss', style);
+    gulp.watch('./*.html').on('change', browserSync.reload);
+    gulp.watch('./assets/js/*.js').on('change', browserSync.reload);
 
-function css() {
-    return gulp
-      .src("scss/style.scss")
-      .pipe(plumber())
-      .pipe(sourcemaps.init())
-      .pipe(sass({ outputStyle: "expanded"}))
-      .pipe(gulp.dest("css/"))
-      .pipe(rename({ suffix: ".min" }))
-      .pipe(postcss([autoprefixer(), cssnano()]))
-      .pipe(sourcemaps.write("./"))
-      .pipe(gulp.dest("css/"))
-      .pipe(browsersync.stream());
-  }
+}
 
+function cleanVendors(){
+    return del('./assets/vendors/**/*');
+}
 
-  function watchFiles() {
-    gulp.watch("scss/*.scss", css);
-    gulp.browserSyncReload;
-  }
+function buildVendors() {
+    var addon1 = gulp.src('./node_modules/bootstrap/**/*')
+                     .pipe(gulp.dest('./assets/vendors/bootstrap'));
+    var addon2 = gulp.src('./node_modules/jquery/dist/**/*')
+                     .pipe(gulp.dest('./assets/vendors/jquery'));
+    var addon3 = gulp.src('./node_modules/popper.js/dist/umd/**/*')
+                     .pipe(gulp.dest('./assets/vendors/popper.js'));
+    var addon4 = gulp.src('./node_modules/animate.css/**/**')
+                     .pipe(gulp.dest('./assets/vendors/animate.css'));
+    var addon5 = gulp.src('./node_modules/wowjs/dist/*')
+                     .pipe(gulp.dest('./assets/vendors/wowjs'));
 
-  const watch = gulp.parallel(watchFiles, browserSync);
+    return (addon1, addon2, addon3, addon4, addon5);
+}
 
-
-  exports.css = css;
-  exports.watch = watch;
-  exports.serve = browserSync;
-
-
-/*Scripts for addons*/
-gulp.task('copyAddonsScripts', function() {
-  var aScript1 = gulp.src(['node_modules/jquery/dist/jquery.min.js'])
-      .pipe(gulp.dest('vendors/jquery'));
-  var aScript2 = gulp.src(['node_modules/bootstrap/dist/js/bootstrap.min.js'])
-      .pipe(gulp.dest('vendors/bootstrap'));
-  var aScript3 = gulp.src(['node_modules/popper.js/dist/popper.min.js'])
-      .pipe(gulp.dest('vendors/popper'));
-  var aScript4 = gulp.src(['node_modules/owl.carousel/dist/owl.carousel.min.js'])
-      .pipe(gulp.dest('vendors/owl-carousel/js'));
-  var aScript5 = gulp.src(['node_modules/aos/dist/aos.js'])
-      .pipe(gulp.dest('vendors/aos/js'));
-  var aScript5 = gulp.src(['node_modules/bootstrap/* '])
-      .pipe(gulp.dest('vendors/bootstrap'));
-  return merge(aScript1, aScript2, aScript3, aScript4, aScript5);
-});
-
-
-/*Styles for addons*/
-gulp.task('copyAddonsStyles', function() {
-  var aStyle1 = gulp.src(['node_modules/mdi/css/materialdesignicons.min.css'])
-      .pipe(gulp.dest('vendors/mdi/css'));
-  var aStyle2 = gulp.src(['node_modules/bootstrap/scss/bootstrap.scss'])
-      .pipe(gulp.dest('vendors/bootstrap/scss'));
-  var aStyle3 = gulp.src(['node_modules/owl.carousel/dist/assets/owl.carousel.min.css'])
-      .pipe(gulp.dest('vendors/owl-carousel/css'));
-  var aStyle4 = gulp.src(['node_modules/owl.carousel/dist/assets/owl.theme.default.css'])
-      .pipe(gulp.dest('vendors/owl-carousel/css'));
-  var aStyle5 = gulp.src(['node_modules/aos/dist/aos.css'])
-  .pipe(gulp.dest('vendors/aos/css'));
-  return merge(aStyle1, aStyle2, aStyle3, aStyle4, aStyle5);
-});
+exports.style = style;
+exports.watch = watch;
+exports.buildVendors = gulp.series(cleanVendors, buildVendors);
