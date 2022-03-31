@@ -1,4 +1,6 @@
 node_modules
 assets/.DS_Store
 assets/fonts/.DS_Store
+package-lock.json
+package.json
 assets/images/.DS_Store
