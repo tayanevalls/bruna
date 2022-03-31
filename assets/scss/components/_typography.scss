@@ -53,8 +53,14 @@
     }
 }
 
-@font-face {
-    font-family: "Caviar Dreams";
-    src: url("/assets/fonts/CaviarDreams-webfont.woff2") format("woff2"),
-         url("/assets/fonts/CaviarDreams-webfont.woff") format("woff");
-  }
+    @font-face {
+        font-family: 'Caviar Dreams';
+        src:  url('/assets/fonts/CaviarDreams-webfont.eot?5dqoim');
+        src:  url('/assets/fonts/CaviarDreams-webfont.eot?5dqoim#iefix') format('embedded-opentype'),
+          url('/assets/fonts/CaviarDreams-webfont.ttf?5dqoim') format('truetype'),
+          url('/assets/fonts/CaviarDreams-webfont.woff?5dqoim') format('woff'),
+          url('/assets/fonts/CaviarDreams-webfont.svg?5dqoim#Caviar Dreams') format('svg');
+        font-weight: normal;
+        font-style: normal;
+      }
+
