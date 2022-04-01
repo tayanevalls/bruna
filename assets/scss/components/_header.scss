@@ -3,6 +3,33 @@ html {
 }
 
 header.home-header {
+
+    &.brandyou{
+        background-color: #f5f3eb;
+
+        h2{
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .btn-outline{
+            background-color:#B1D235;
+            border-color: #B1D235;;
+        }
+    }
+    &.metodoyou{
+        background-color: #647b98;
+
+        h2{
+            font-family: 'Quicksand', sans-serif;
+        }
+
+        .btn-outline{
+            background-color:#ffffff;
+            color: #647b98;
+            border-color: #ffffff;
+        }
+    }
+    
     background-color:#BA2625;
     background-size: cover;
     background-position: center;
@@ -321,6 +348,12 @@ nav {
             &.active {
                 opacity: 1;
             }
+        }
+    }
+
+    .carousel-item{
+        img{
+            max-width: 450px;
         }
     }
 
