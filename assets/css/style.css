@@ -58,7 +58,7 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "montserrat,sans-serif";
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -5548,7 +5548,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "montserrat,sans-serif";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -5650,7 +5650,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Poppins", sans-serif;
+  font-family: "montserrat,sans-serif";
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
@@ -10043,11 +10043,11 @@ html {
 }
 
 header.home-header {
-  background-color: #BA2625;
-  background-size: cover;
-  background-position: center;
+  background: #4667A5 url("/assets/images/ícone-branco.png");
   font-family: "Caviar";
   color: #ffffff;
+  background-position: bottom 50px left 21%;
+  background-repeat: no-repeat;
 }
 header.home-header.brandyou {
   background-color: #f5f3eb;
@@ -10059,8 +10059,19 @@ header.home-header.brandyou .btn-outline {
   background-color: #B1D235;
   border-color: #B1D235;
 }
+header.home-header.brandyou nav {
+  background-color: #f5f3eb;
+  border-bottom: 1px solid rgb(231, 228, 218);
+}
 header.home-header.metodoyou {
   background-color: #647b98;
+}
+header.home-header.metodoyou nav {
+  background-color: #647b98;
+  border-bottom: 1px solid #5a718e;
+}
+header.home-header.metodoyou nav img {
+  width: 180px;
 }
 header.home-header.metodoyou h2 {
   font-family: "Quicksand", sans-serif;
@@ -10075,31 +10086,37 @@ header.home-header.metodoyou .btn-outline {
     background-size: 100% 81px;
     background-position: top;
     background-image: none;
-    background-color: #BA2625;
   }
   header.home-header .menu-wrapper {
     display: none;
   }
 }
-header.home-header .nav-popup-toggle #bruna-agency {
-  fill: #ffffff;
-}
 
 nav {
   display: flex;
   justify-content: space-between;
-  padding-top: 27px;
-  padding-bottom: 27px;
+  padding-top: 10px;
+  padding-bottom: 5px;
   position: relative;
   z-index: 1001;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
+  position: fixed;
+  background-color: #BA2625;
+  width: 100%;
 }
-nav .logo-white {
-  display: none;
+@media (max-width: 767px) {
+  nav .nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+nav img {
+  width: 250px;
 }
 nav .menu-wrapper {
-  margin-left: 100px;
+  margin-left: 170px;
 }
 nav .nav-link {
   display: block;
@@ -10114,9 +10131,6 @@ nav .nav-link:hover {
 .nav-popup-toggle {
   border: 0;
   background-color: transparent;
-}
-.nav-popup-toggle #bruna-agency {
-  fill: #000000;
 }
 .nav-popup-toggle:focus {
   outline: none;
@@ -10312,8 +10326,8 @@ nav .nav-link:hover {
 @media (min-width: 768px) {
   .header-carousel {
     padding-right: 50px;
-    padding-top: 50px;
-    padding-bottom: 110px;
+    padding-top: 110px;
+    padding-bottom: 0;
   }
 }
 .header-carousel .carousel-indicators {
@@ -10354,12 +10368,25 @@ nav .nav-link:hover {
 }
 .header-carousel .carousel-item img {
   max-width: 450px;
+  float: right;
+}
+@media (max-width: 767px) {
+  .header-carousel .carousel-item img {
+    max-width: 100%;
+    float: initial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.header-carousel .carousel-item .item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .header-carousel .carousel-item-title {
-  font-size: 45px;
+  font-size: 40px;
   line-height: 1.5;
-  padding-top: 83px;
-  margin-bottom: 28px;
   -webkit-animation-delay: 0.25s;
           animation-delay: 0.25s;
   -webkit-animation-duration: 1s;
@@ -10368,8 +10395,13 @@ nav .nav-link:hover {
 }
 @media (max-width: 767px) {
   .header-carousel .carousel-item-title {
-    font-size: 40px;
-    padding-top: 40px;
+    font-size: 20px;
+    padding-top: 90px;
+    margin-bottom: 20px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 .header-carousel .carousel-item-title span {
@@ -10481,7 +10513,23 @@ section {
 .service-section {
   position: relative;
   color: #fff;
-  background-color: #262625;
+  background-color: #ffffff;
+}
+.service-section .box {
+  background-color: #DD4747;
+  margin-left: 15px;
+  max-width: 31.333333%;
+  padding: 20px;
+}
+@media (max-width: 767px) {
+  .service-section .box {
+    max-width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
+.service-section .box i {
+  font-size: 100px;
 }
 .service-section .project-thumbnail {
   margin-bottom: 15px;
@@ -10504,17 +10552,8 @@ section {
 .service-section .service-section-title {
   margin-bottom: 35px;
   font-family: "Caviar Dreams";
-  color: #fff;
-}
-@media (max-width: 767px) {
-  .service-section {
-    padding-right: 90px;
-  }
-}
-@media (max-width: 574px) {
-  .service-section {
-    padding-right: 0;
-  }
+  color: #262625;
+  text-align: center;
 }
 .service-section::before, .service-section::after {
   content: "";
@@ -10545,7 +10584,9 @@ section {
 
 .about-section {
   background-color: #f5f3eb;
+  font-family: Caviar;
   padding-bottom: 70px;
+  text-align: justify;
 }
 .about-section .about-section-title {
   margin-bottom: 35px;
@@ -10571,6 +10612,7 @@ section {
 @media (max-width: 767px) {
   .why-section .m-5 {
     margin: 0 !important;
+    margin-top: 20px !important;
   }
 }
 .why-section p {
@@ -10578,6 +10620,8 @@ section {
 }
 .why-section .why-section-title {
   margin-bottom: 35px;
+  font-size: 40px;
+  font-family: Caviar;
 }
 @media (min-width: 768px) {
   .why-section .why-column-indented {
@@ -10592,37 +10636,19 @@ section {
   color: #DD4747;
 }
 
-.projects-section {
-  background-color: #f5f3eb;
-  padding-bottom: 70px;
-}
-@media (min-width: 768px) {
-  .projects-section .project-column-indented {
-    padding-top: 66px;
-  }
-}
-
-.project-card {
-  margin-bottom: 36px;
-}
-.project-card .project-thumbnail {
-  width: 100%;
-  margin-bottom: 29px;
-}
-.project-card .project-title {
-  color: #BA2625;
-  margin-bottom: 0;
-}
-.project-card .project-category {
-  font-size: 12px;
-  margin-bottom: 0;
-}
-
 .team-section {
-  background-color: #262625;
+  background: #262625 url("/assets/images/BrunadaGama33.jpg") top 20% center;
+  background-repeat-x: repeat;
+  background-size: 80%;
+  background-repeat-y: no-repeat;
+}
+.team-section .section-title {
+  font-size: 40px;
+  font-family: Caviar;
 }
 .team-section .slider {
   font-style: italic;
+  font-size: 13px;
   height: 100%;
   position: relative;
   overflow: hidden;
@@ -10634,7 +10660,7 @@ section {
 .team-section .slider__nav {
   width: 12px;
   height: 12px;
-  margin: 19rem 12px 10px;
+  margin: 22rem 12px 10px;
   border-radius: 50%;
   z-index: 10;
   outline: 6px solid #ccc;
@@ -10675,7 +10701,7 @@ section {
 }
 .team-section .slider__contents {
   height: 100%;
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
   display: -ms-flexbox;
   flex: 1;
@@ -10683,19 +10709,10 @@ section {
   align-items: center;
   justify-content: center;
 }
-.team-section .slider__image {
-  font-size: 2.7rem;
-  color: #2196F3;
-}
-.team-section .slider__caption {
-  font-weight: 500;
-  margin: 2rem 0 1rem;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-  text-transform: uppercase;
-}
 .team-section .slider__txt {
   color: #fff;
   margin-bottom: 3rem;
+  text-align: justify;
 }
 @-webkit-keyframes check {
   50% {
@@ -10729,8 +10746,10 @@ section {
   color: #ffffff;
 }
 .career-section .section-title {
+  font-size: 40px;
   position: relative;
   padding-bottom: 50px;
+  font-family: Caviar;
 }
 .career-section p {
   color: #ffffff;
@@ -10741,7 +10760,23 @@ section {
 }
 
 .contact-section {
-  background-color: #f5f3eb;
+  background-color: #DD4747;
+}
+.contact-section .contact-social-links .nav-link {
+  color: #262625;
+  padding: 0 10px 20px 0;
+  text-decoration: none;
+}
+.contact-section .contact-social-links .nav-link:hover {
+  text-decoration: underline;
+}
+.contact-section .contact-social-links .nav-link img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+.contact-section .contact-page-form-wrapper .form-control {
+  background-color: #DD4747;
 }
 @media (max-width: 767px) {
   .contact-section .contact-page-form-wrapper {
@@ -10749,10 +10784,22 @@ section {
   }
 }
 .contact-section .section-title {
-  font-size: 50px;
+  font-size: 40px;
   margin-bottom: 36px;
+  font-family: Caviar;
+  color: #ffffff;
 }
 
+.brandyou-page .contact-section {
+  background-color: #f5f3eb;
+}
+.brandyou-page .contact-section .contact-page-form-wrapper .form-control {
+  background-color: #f5f3eb;
+}
+.brandyou-page footer {
+  background-color: #f5f3eb;
+  border-top: 1px solid rgb(231, 228, 218);
+}
 .brandyou-page nav .menu-wrapper {
   margin-left: 600px;
 }
@@ -10773,10 +10820,12 @@ section {
 }
 .brandyou-page .contact-section h2 {
   font-family: "Quicksand", sans-serif;
+  color: #252526;
 }
 .brandyou-page .contact-section .btn-outline {
   background-color: #B1D235;
   border-color: #B1D235;
+  color: #fff;
 }
 .brandyou-page .contact-section .btn-outline:hover {
   border-color: #B1D235;
@@ -10798,6 +10847,7 @@ section {
 }
 .brandyou-page .brandyou-section {
   background-color: #f5f3eb;
+  padding: 150px 0 30px;
 }
 .brandyou-page .brandyou-section a {
   color: #B1D235;
@@ -10813,6 +10863,21 @@ section {
   font-family: "Quicksand", sans-serif;
 }
 
+.metodoyou-page .section-title {
+  font-family: montserrat, sans-serif;
+}
+.metodoyou-page .about-section {
+  background-color: #fff;
+}
+.metodoyou-page .about-section p {
+  font-family: montserrat, sans-serif;
+}
+.metodoyou-page .about-section .img-mac {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .metodoyou-page .team-section {
   background-color: #292829;
 }
@@ -10833,7 +10898,7 @@ section {
   border-top: 1px solid #5a718e;
 }
 .metodoyou-page nav .menu-wrapper {
-  margin-left: 750px;
+  margin-left: 770px;
 }
 .metodoyou-page nav .menu-wrapper .btn-outline {
   background-color: #ffffff;
@@ -10869,9 +10934,17 @@ section {
   background: transparent;
   color: #292829;
 }
+.metodoyou-page .object-section {
+  background-image: url("/assets/images/foto-11.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  color: #fff;
+}
+.metodoyou-page .object-section h2 {
+  text-align: center;
+}
 .metodoyou-page .service-section {
   color: #404042;
-  background-color: #ffffff;
 }
 .metodoyou-page .service-section i {
   font-size: 70px;
@@ -10879,6 +10952,7 @@ section {
 }
 .metodoyou-page .service-section .section-title {
   text-align: center;
+  font-size: 40px;
 }
 .metodoyou-page .service-section h2 {
   color: #647b98;
@@ -10900,6 +10974,12 @@ section {
 }
 .metodoyou-page .metodoyou-section {
   background-color: #647b98;
+  padding: 100px 0 0;
+}
+.metodoyou-page .metodoyou-section .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .metodoyou-page .metodoyou-section a {
   color: #ffffff;
@@ -11002,21 +11082,21 @@ section {
   color: #262625;
 }
 .contact-page-form-wrapper .btn, .contact-page-form-wrapper .btn-outline, .contact-page-form-wrapper .go-top-btn {
-  background-color: #DD4747;
-  border-color: #DD4747;
-  color: #fff;
+  background-color: #ffffff;
+  border-color: #ffffff;
+  color: #DD4747;
 }
 .contact-page-form-wrapper .btn:hover, .contact-page-form-wrapper .btn-outline:hover, .contact-page-form-wrapper .go-top-btn:hover {
   background-color: transparent;
-  border-color: #DD4747;
-  color: #DD4747;
+  border-color: #ffffff;
+  color: #ffffff;
 }
 
 footer {
-  background-color: #f5f3eb;
+  background-color: #DD4747;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-top: 1px solid #e6e6e6;
+  border-top: 1px solid rgb(204, 61, 61);
 }
 footer .footer-text {
   font-size: 10px;

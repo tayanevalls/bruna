@@ -18,7 +18,24 @@ section {
 .service-section {
     position: relative;
     color: #fff;
-    background-color: #262625;
+    background-color: #ffffff;
+
+    .box{
+        background-color: #DD4747;  
+        margin-left: 15px;
+        max-width: 31.333333%;
+        padding: 20px;
+
+        @media (max-width: 767px) {
+            max-width: 100%;
+            margin: 0;
+            margin-bottom: 20px;
+        }
+
+        i{
+            font-size: 100px;
+        }
+    }
 
     .project-thumbnail{
         margin-bottom: 15px;
@@ -45,16 +62,11 @@ section {
     .service-section-title{
         margin-bottom: 35px;
         font-family: 'Caviar Dreams';
-        color: #fff;
+        color: #262625;
+        text-align: center;
     }
 
-    @media (max-width: 767px) {
-        padding-right: 90px;
-    }
 
-    @media (max-width: 574px) {
-        padding-right: 0;
-    }
 
     &::before,
     &::after {
@@ -86,7 +98,9 @@ section {
 
 .about-section {
     background-color: #f5f3eb;
+    font-family: Caviar;
     padding-bottom: 70px;
+    text-align: justify;
     .about-section-title{
         margin-bottom: 35px;
     }
@@ -111,6 +125,7 @@ section {
     @media (max-width: 767px) {
         .m-5 {
             margin: 0!important;
+            margin-top: 20px !important;
         }
     }
     background-color: #DD4747;
@@ -122,6 +137,8 @@ section {
     }
     .why-section-title{
         margin-bottom: 35px;
+        font-size: 40px;
+        font-family: Caviar;
     }
     .why-column-indented {
         @media(min-width: 768px) {
@@ -139,41 +156,20 @@ section {
     }
 }
 
-.projects-section {
-    background-color: #f5f3eb;
-    padding-bottom: 70px;
-
-    .project-column-indented {
-        @media(min-width: 768px) {
-            padding-top: 66px;
-        }
-    }
-}
-
-.project-card {
-    margin-bottom: 36px;
-
-    .project-thumbnail {
-        width: 100%;
-        margin-bottom: 29px;
-    }
-
-    .project-title {
-        color: theme-color();
-        margin-bottom: 0;
-    }
-
-    .project-category {
-        font-size: 12px;
-        margin-bottom: 0;
-    }
-}
-
 .team-section {
-    background-color: #262625;
+    background:#262625 url("/assets/images/BrunadaGama33.jpg") top 20% center;
+    background-repeat-x: repeat;
+    background-size: 80%;
+    background-repeat-y: no-repeat;
+
+    .section-title{
+        font-size: 40px;
+        font-family: Caviar;
+    }
     
     .slider {
         font-style: italic;
+        font-size: 13px;
         height: 100%;
         position: relative;
         overflow: hidden;
@@ -197,7 +193,7 @@ section {
       .slider__nav {
         width: 12px;
         height: 12px;
-        margin: 19rem 12px 10px;
+        margin: 22rem 12px 10px;
         border-radius: 50%;
         z-index: 10;
         outline: 6px solid #ccc;
@@ -251,7 +247,7 @@ section {
       
       .slider__contents {
         height: 100%;
-        padding: 2rem;
+        padding: 1rem;
         text-align: center;
         display: -webkit-box;
         display: -webkit-flex;
@@ -272,22 +268,12 @@ section {
         -ms-flex-pack: center;
         justify-content: center;
       }
-      
-      .slider__image {
-        font-size: 2.7rem;
-        color: #2196F3;
-      }
-      
-      .slider__caption {
-        font-weight: 500;
-        margin: 2rem 0 1rem;
-        text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
-        text-transform: uppercase;
-      }
+
       
       .slider__txt {
         color: #fff;
         margin-bottom: 3rem;
+        text-align: justify;
       }
       
       @-webkit-keyframes check {
@@ -327,8 +313,10 @@ section {
     background-color: #4667A5;
     color: #ffffff;
     .section-title {
+        font-size: 40px;
         position: relative;
         padding-bottom: 50px;
+        font-family: Caviar;
     }
     p{
         color: #ffffff;  
@@ -344,21 +332,59 @@ section {
 }
 
 .contact-section {
-    background-color: #f5f3eb;
+    background-color: #DD4747;
+    .contact-social-links {
+        .nav-link {
+            color: #262625;
+            padding: 0 10px 20px 0;
+            text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
+            img {
+                width: 20px;
+                height: 20px;
+                margin-right: 8px;
+            }
+        }
+        
+
+    }
+    .contact-page-form-wrapper .form-control {
+        background-color: #DD4747;
+    }
     @media (max-width: 767px) {
         .contact-page-form-wrapper {
             padding: 0;
         }
     }
     .section-title {
-        font-size: 50px;
+        font-size: 40px;
         margin-bottom: 36px;
+        font-family: Caviar;
+        color: #ffffff;
 
 
     }
 }
 
+
+
+
+
+
 .brandyou-page{
+    .contact-section {
+        background-color: #f5f3eb;
+
+        .contact-page-form-wrapper .form-control {
+            background-color: #f5f3eb;;
+        }
+    }
+    footer {
+        background-color: #f5f3eb;
+        border-top: 1px solid rgb(231 228 218);
+    }
     nav .menu-wrapper {
         margin-left: 600px;
 
@@ -382,11 +408,13 @@ section {
         }
         h2{
             font-family: 'Quicksand', sans-serif;
+            color: #252526;
         }
 
         .btn-outline{
             background-color:#B1D235 ;
             border-color: #B1D235;
+            color: #fff;
 
             &:hover{
                 border-color: #B1D235;
@@ -413,6 +441,7 @@ section {
 
 .brandyou-section{
     background-color: #f5f3eb;
+    padding: 150px 0 30px;
 
     a{
         color:#B1D235;  
@@ -436,6 +465,25 @@ section {
 
 
 .metodoyou-page{
+
+    .section-title{
+        font-family: montserrat, sans-serif;
+    }
+
+    .about-section{
+        background-color: #fff;
+
+        p{
+            font-family: montserrat, sans-serif;
+        }
+
+        .img-mac{
+            margin-top: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
 
     .team-section{
         background-color: #292829;
@@ -461,7 +509,7 @@ section {
         border-top: 1px solid #5a718e;
     }
     nav .menu-wrapper {
-        margin-left: 750px;
+        margin-left: 770px;
 
         .btn-outline{
             background-color:#ffffff ;
@@ -503,16 +551,27 @@ section {
             }
         }
     }
+
+    .object-section{
+        background-image: url("/assets/images/foto-11.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        color: #fff;
+
+        h2{
+            text-align: center;
+        }
+    }
     .service-section{
+        color: #404042;
+
         i{
             font-size: 70px;
             color:#647b98;
         }
-        color: #404042;
-        background-color: #ffffff;
-        
         .section-title{
             text-align: center;
+            font-size: 40px;
         }
 
         h2{
@@ -538,6 +597,13 @@ section {
 
 .metodoyou-section{
     background-color: #647b98;
+    padding: 100px 0 0;
+
+    .text{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
     a{
         color:#ffffff;  

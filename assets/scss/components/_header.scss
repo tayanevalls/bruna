@@ -13,11 +13,26 @@ header.home-header {
 
         .btn-outline{
             background-color:#B1D235;
-            border-color: #B1D235;;
+            border-color: #B1D235;
+        }
+
+        nav{
+            background-color: #f5f3eb;
+            border-bottom: 1px solid rgb(231 228 218);
+
         }
     }
     &.metodoyou{
         background-color: #647b98;
+
+        nav{
+            background-color: #647b98;
+            border-bottom: 1px solid #5a718e;
+
+            img{
+                width: 180px;
+            }
+        }
 
         h2{
             font-family: 'Quicksand', sans-serif;
@@ -30,46 +45,62 @@ header.home-header {
         }
     }
     
-    background-color:#BA2625;
-    background-size: cover;
-    background-position: center;
+    background: #4667A5 url("/assets/images/ícone-branco.png");
     font-family: 'Caviar';
     color: #ffffff;
+    background-position: bottom 50px left 21%;
+    background-repeat: no-repeat;
+
+
+
+    
+        
 
     @media (max-width: 767px) {
         background-size: 100% 81px;
         background-position: top;
         background-image:none;
-        background-color:#BA2625 ;
 
         .menu-wrapper {
             display: none;
         }
     }
 
-
-        .nav-popup-toggle #bruna-agency {
-        fill: $white;
-    }
-
 }
 
 nav {
+
+    
     display: flex;
     justify-content: space-between;
-    padding-top: 27px;
-    padding-bottom: 27px;
+    padding-top: 10px;
+    padding-bottom: 5px;
     position: relative;
     z-index: 1001;
     font-family: "Poppins", sans-serif;
     font-size: 14px;
+    position: fixed;
+    background-color: #BA2625;
+    width: 100%;
 
-    .logo-white {
-        display: none;
+
+    @media (max-width: 767px) {
+        .nav{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+
+    }
+
+    
+
+    img{
+        width: 250px;
     }
 
     .menu-wrapper{
-        margin-left: 100px;
+        margin-left: 170px;
     }
     .nav-link {
         display: block;
@@ -83,13 +114,10 @@ nav {
     }
 }
 
+
 .nav-popup-toggle {
     border: 0;
     background-color: transparent;
-
-    #bruna-agency {
-        fill: $black;
-    }
 
     &:focus {
         outline: none;
@@ -309,8 +337,8 @@ nav {
 
     @media (min-width: 768px) {
         padding-right: 50px;
-        padding-top: 50px;
-        padding-bottom: 110px;
+        padding-top: 110px;
+        padding-bottom: 0;
 
     }
 
@@ -352,23 +380,42 @@ nav {
     }
 
     .carousel-item{
+
         img{
             max-width: 450px;
+            float: right;
+            @media (max-width: 767px) {
+                max-width: 100%;
+                float: initial;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .item{
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
 
+
+
     .carousel-item-title {
-        font-size: 45px;
+        font-size: 40px;
         line-height: 1.5;
-        padding-top: 83px;
-        margin-bottom: 28px;
         animation-delay: 0.25s;
         animation-duration: 1s;
         position: relative;
 
         @media (max-width: 767px) {
-            font-size: 40px;
-            padding-top: 40px;
+            font-size: 20px;
+            padding-top: 90px;
+            margin-bottom: 20px;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
          span {
