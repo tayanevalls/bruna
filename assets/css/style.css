@@ -1,13 +1,19 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Crimson+Text:600|Poppins:300,400,500,600,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+@font-face {
+  font-family: "Caviar Dreams";
+  src: url("../fonts/webfonts/CaviarDreams-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap");
-@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -10010,12 +10016,6 @@ h3 {
   text-decoration: none;
 }
 
-@font-face {
-  font-family: "Caviar Dreams";
-  src: url("/assets/fonts/webfonts/CaviarDreams-webfont.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
 .btn-outline {
   border: 1px solid #ffffff;
   padding: 12px 30px;
@@ -10043,7 +10043,7 @@ html {
 }
 
 header.home-header {
-  background: #4667A5 url("/assets/images/icone-branco.png");
+  background: #4667A5 url("../images/icone-branco.png");
   font-family: "Caviar Dreams";
   color: #ffffff;
   background-position: bottom 50px left 21%;
@@ -10637,7 +10637,7 @@ section {
 }
 
 .team-section {
-  background: #262625 url("/assets/images/foto-13.jpg") top 20% center;
+  background: #262625 url("../images/foto-13.jpg") top 20% center;
   background-repeat-x: repeat;
   background-size: 80%;
   background-repeat-y: no-repeat;
@@ -10935,7 +10935,7 @@ section {
   color: #292829;
 }
 .metodoyou-page .object-section {
-  background-image: url("/assets/images/foto-12.png");
+  background-image: url("../images/foto-12.png");
   background-repeat: no-repeat;
   background-size: 100%;
   color: #fff;
