@@ -10011,7 +10011,7 @@ h3 {
 }
 
 @font-face {
-  font-family: "Caviar";
+  font-family: "Caviar Dreams";
   src: url("/assets/fonts/webfonts/CaviarDreams-webfont.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
@@ -10044,7 +10044,7 @@ html {
 
 header.home-header {
   background: #4667A5 url("/assets/images/ícone-branco.png");
-  font-family: "Caviar";
+  font-family: "Caviar Dreams";
   color: #ffffff;
   background-position: bottom 50px left 21%;
   background-repeat: no-repeat;
@@ -10584,7 +10584,7 @@ section {
 
 .about-section {
   background-color: #f5f3eb;
-  font-family: Caviar;
+  font-family: "Caviar Dreams";
   padding-bottom: 70px;
   text-align: justify;
 }
@@ -10621,7 +10621,7 @@ section {
 .why-section .why-section-title {
   margin-bottom: 35px;
   font-size: 40px;
-  font-family: Caviar;
+  font-family: "Caviar Dreams";
 }
 @media (min-width: 768px) {
   .why-section .why-column-indented {
@@ -10644,7 +10644,7 @@ section {
 }
 .team-section .section-title {
   font-size: 40px;
-  font-family: Caviar;
+  font-family: "Caviar Dreams";
 }
 .team-section .slider {
   font-style: italic;
@@ -10749,7 +10749,7 @@ section {
   font-size: 40px;
   position: relative;
   padding-bottom: 50px;
-  font-family: Caviar;
+  font-family: "Caviar Dreams";
 }
 .career-section p {
   color: #ffffff;
@@ -10786,7 +10786,7 @@ section {
 .contact-section .section-title {
   font-size: 40px;
   margin-bottom: 36px;
-  font-family: Caviar;
+  font-family: "Caviar Dreams";
   color: #ffffff;
 }
 
