@@ -110,6 +110,7 @@ section {
     }
 
     .zoom{
+        max-width: 380px;
         transition: transform .2s; 
         &:hover{
             transform: scale(1.1); 
@@ -367,6 +368,9 @@ section {
 }
 
 .contact-section {
+    img{
+        max-width: 380px;
+    }
     background-color: #DD4747;
     .contact-social-links {
         .nav-link {
