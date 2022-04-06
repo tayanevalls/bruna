@@ -10591,6 +10591,15 @@ section {
   padding-bottom: 70px;
   text-align: justify;
 }
+.about-section p {
+  font-family: "Caviar Dreams";
+}
+.about-section .zoom {
+  transition: transform 0.2s;
+}
+.about-section .zoom:hover {
+  transform: scale(1.1);
+}
 .about-section .section-title {
   font-size: 30px;
 }
