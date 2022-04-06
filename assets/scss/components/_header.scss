@@ -382,7 +382,7 @@ nav {
     .carousel-item{
 
         img{
-            max-width: 450px;
+            max-width: 380px;
             float: right;
             @media (max-width: 767px) {
                 max-width: 100%;
@@ -402,7 +402,7 @@ nav {
 
 
     .carousel-item-title {
-        font-size: 40px;
+        font-size: 30px;
         line-height: 1.5;
         animation-delay: 0.25s;
         animation-duration: 1s;

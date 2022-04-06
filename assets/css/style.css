@@ -10367,7 +10367,7 @@ nav .nav-link:hover {
   opacity: 1;
 }
 .header-carousel .carousel-item img {
-  max-width: 450px;
+  max-width: 380px;
   float: right;
 }
 @media (max-width: 767px) {
@@ -10385,7 +10385,7 @@ nav .nav-link:hover {
   justify-content: center;
 }
 .header-carousel .carousel-item-title {
-  font-size: 40px;
+  font-size: 30px;
   line-height: 1.5;
   -webkit-animation-delay: 0.25s;
           animation-delay: 0.25s;
@@ -10549,6 +10549,9 @@ section {
 .service-section p {
   font-size: 14px;
 }
+.service-section .section-title {
+  font-size: 30px;
+}
 .service-section .service-section-title {
   margin-bottom: 35px;
   font-family: "Caviar Dreams";
@@ -10588,6 +10591,9 @@ section {
   padding-bottom: 70px;
   text-align: justify;
 }
+.about-section .section-title {
+  font-size: 30px;
+}
 @media (max-width: 574px) {
   .about-section {
     padding-bottom: 30px;
@@ -10625,7 +10631,7 @@ section {
 }
 .why-section .why-section-title {
   margin-bottom: 35px;
-  font-size: 40px;
+  font-size: 30px;
   font-family: "Caviar Dreams";
 }
 @media (min-width: 768px) {
@@ -10656,7 +10662,7 @@ section {
   padding: 0;
 }
 .team-section .section-title {
-  font-size: 40px;
+  font-size: 30px;
   font-family: "Caviar Dreams";
 }
 .team-section .slider {
@@ -10755,7 +10761,7 @@ section {
 }
 .team-section .section-title {
   color: #fff;
-  margin-top: 40px;
+  margin-top: 30px;
   margin-bottom: 22px;
   text-align: center;
 }
@@ -10765,7 +10771,7 @@ section {
   color: #ffffff;
 }
 .career-section .section-title {
-  font-size: 40px;
+  font-size: 30px;
   position: relative;
   padding-bottom: 50px;
   font-family: "Caviar Dreams";
@@ -10806,7 +10812,7 @@ section {
   }
 }
 .contact-section .section-title {
-  font-size: 40px;
+  font-size: 30px;
   margin-bottom: 36px;
   font-family: "Caviar Dreams";
   color: #ffffff;

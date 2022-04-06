@@ -58,6 +58,9 @@ section {
     p{
         font-size: 14px;
     }
+    .section-title {
+        font-size: 30px;
+    }
 
     .service-section-title{
         margin-bottom: 35px;
@@ -102,6 +105,10 @@ section {
     padding-bottom: 70px;
     text-align: justify;
 
+    .section-title{
+        font-size: 30px;
+    }
+
     @media (max-width: 574px) {
         padding-bottom: 30px;
     }
@@ -141,7 +148,7 @@ section {
     }
     .why-section-title{
         margin-bottom: 35px;
-        font-size: 40px;
+        font-size: 30px;
         font-family: "Caviar Dreams";
     }
     .why-column-indented {
@@ -175,7 +182,7 @@ section {
     }
 
     .section-title{
-        font-size: 40px;
+        font-size: 30px;
         font-family: "Caviar Dreams";
     }
     
@@ -318,7 +325,7 @@ section {
       }
     .section-title {
         color: #fff;
-        margin-top: 40px;
+        margin-top: 30px;
         margin-bottom: 22px;
         text-align: center;
     }
@@ -330,7 +337,7 @@ section {
     background-color: #4667A5;
     color: #ffffff;
     .section-title {
-        font-size: 40px;
+        font-size: 30px;
         position: relative;
         padding-bottom: 50px;
         font-family: "Caviar Dreams";
@@ -379,7 +386,7 @@ section {
         }
     }
     .section-title {
-        font-size: 40px;
+        font-size: 30px;
         margin-bottom: 36px;
         font-family: "Caviar Dreams";
         color: #ffffff;
