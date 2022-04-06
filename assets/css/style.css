@@ -8,6 +8,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Milk Wild";
+  src: url("../fonts/Milk-and-Wild.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -10046,7 +10052,7 @@ header.home-header {
   background: #4667A5 url("../images/icone-branco.png");
   font-family: "Caviar Dreams";
   color: #ffffff;
-  background-position: bottom 50px left 21%;
+  background-position: bottom 50px left 19%;
   background-repeat: no-repeat;
 }
 header.home-header.brandyou {
@@ -10102,8 +10108,8 @@ nav {
   padding-bottom: 5px;
   position: relative;
   z-index: 1001;
-  font-family: "Poppins", sans-serif;
-  font-size: 14px;
+  font-family: "Milk Wild";
+  font-size: 18px;
   position: fixed;
   background-color: #BA2625;
   width: 100%;
@@ -10119,7 +10125,7 @@ nav img {
   width: 250px;
 }
 nav .menu-wrapper {
-  margin-left: 170px;
+  margin-left: 70px;
 }
 nav .nav-link {
   display: block;
