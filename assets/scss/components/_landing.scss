@@ -101,6 +101,10 @@ section {
     font-family: "Caviar Dreams";
     padding-bottom: 70px;
     text-align: justify;
+
+    @media (max-width: 574px) {
+        padding-bottom: 30px;
+    }
     .about-section-title{
         margin-bottom: 35px;
     }
@@ -161,6 +165,14 @@ section {
     background-repeat-x: repeat;
     background-size: 80%;
     background-repeat-y: no-repeat;
+
+    @media(max-width: 768px) {
+        background-size: 100%;
+    }
+
+    .col-md-6{
+        padding: 0;
+    }
 
     .section-title{
         font-size: 40px;
@@ -246,6 +258,11 @@ section {
       }
       
       .slider__contents {
+
+        @media(max-width: 768px) {
+            padding: 0;
+            font-size: 12px;
+        }
         height: 100%;
         padding: 1rem;
         text-align: center;
@@ -356,6 +373,9 @@ section {
     @media (max-width: 767px) {
         .contact-page-form-wrapper {
             padding: 0;
+        }
+        .nav-link {
+            font-size: 13px;
         }
     }
     .section-title {
@@ -557,6 +577,16 @@ section {
         background-repeat: no-repeat;
         background-size: 100%;
         color: #fff;
+        @media (max-width: 767px) {
+            background-repeat: repeat;
+            background-size: 300%;
+            .ml-5 {
+                margin-left: 0 !important;
+            }
+            .mt-5 {
+                margin-top: 0 !important;
+            }
+        }
 
         h2{
             text-align: center;
@@ -598,6 +628,10 @@ section {
 .metodoyou-section{
     background-color: #647b98;
     padding: 100px 0 0;
+
+    @media (max-width: 767px) {
+        padding: 100px 30px 20px
+    }
 
     .text{
         display: flex;

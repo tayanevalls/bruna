@@ -10588,6 +10588,11 @@ section {
   padding-bottom: 70px;
   text-align: justify;
 }
+@media (max-width: 574px) {
+  .about-section {
+    padding-bottom: 30px;
+  }
+}
 .about-section .about-section-title {
   margin-bottom: 35px;
 }
@@ -10641,6 +10646,14 @@ section {
   background-repeat-x: repeat;
   background-size: 80%;
   background-repeat-y: no-repeat;
+}
+@media (max-width: 768px) {
+  .team-section {
+    background-size: 100%;
+  }
+}
+.team-section .col-md-6 {
+  padding: 0;
 }
 .team-section .section-title {
   font-size: 40px;
@@ -10708,6 +10721,12 @@ section {
   flex-flow: column nowrap;
   align-items: center;
   justify-content: center;
+}
+@media (max-width: 768px) {
+  .team-section .slider__contents {
+    padding: 0;
+    font-size: 12px;
+  }
 }
 .team-section .slider__txt {
   color: #fff;
@@ -10781,6 +10800,9 @@ section {
 @media (max-width: 767px) {
   .contact-section .contact-page-form-wrapper {
     padding: 0;
+  }
+  .contact-section .nav-link {
+    font-size: 13px;
   }
 }
 .contact-section .section-title {
@@ -10940,6 +10962,18 @@ section {
   background-size: 100%;
   color: #fff;
 }
+@media (max-width: 767px) {
+  .metodoyou-page .object-section {
+    background-repeat: repeat;
+    background-size: 300%;
+  }
+  .metodoyou-page .object-section .ml-5 {
+    margin-left: 0 !important;
+  }
+  .metodoyou-page .object-section .mt-5 {
+    margin-top: 0 !important;
+  }
+}
 .metodoyou-page .object-section h2 {
   text-align: center;
 }
@@ -10975,6 +11009,11 @@ section {
 .metodoyou-page .metodoyou-section {
   background-color: #647b98;
   padding: 100px 0 0;
+}
+@media (max-width: 767px) {
+  .metodoyou-page .metodoyou-section {
+    padding: 100px 30px 20px;
+  }
 }
 .metodoyou-page .metodoyou-section .text {
   display: flex;
@@ -11106,6 +11145,9 @@ footer .footer-text {
   footer .footer-text {
     width: 100%;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 @media (max-width: 767px) {
