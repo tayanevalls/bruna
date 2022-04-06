@@ -10068,6 +10068,7 @@ header.home-header.brandyou .btn-outline {
 header.home-header.brandyou nav {
   background-color: #f5f3eb;
   border-bottom: 1px solid rgb(231, 228, 218);
+  font-family: montserrat, sans-serif;
 }
 header.home-header.metodoyou {
   background-color: #647b98;
@@ -10075,6 +10076,7 @@ header.home-header.metodoyou {
 header.home-header.metodoyou nav {
   background-color: #647b98;
   border-bottom: 1px solid #5a718e;
+  font-family: montserrat, sans-serif;
 }
 header.home-header.metodoyou nav img {
   width: 180px;
