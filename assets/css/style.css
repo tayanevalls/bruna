@@ -14,6 +14,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "EncodeSans";
+  src: url("../fonts/EncodeSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -10089,7 +10095,7 @@ header.home-header.metodoyou .btn-outline {
   color: #647b98;
   border-color: #ffffff;
 }
-header.home-header h1 {
+header.home-header h2 {
   font-weight: 100;
 }
 @media (max-width: 767px) {
@@ -10115,6 +10121,26 @@ nav {
   position: fixed;
   background-color: #BA2625;
   width: 100%;
+}
+nav .navbar-dark .navbar-toggler {
+  border-color: transparent;
+  background: #dd4747;
+  outline: none;
+}
+nav #navbarToggleExternalContent ul {
+  list-style: none;
+  margin-bottom: 30px;
+  padding: 0;
+}
+nav #navbarToggleExternalContent ul li a {
+  padding: 1rem 0;
+  border-bottom: 1px solid;
+}
+nav .bg-dark {
+  background-color: transparent;
+}
+nav .navbar {
+  padding: 0;
 }
 @media (max-width: 767px) {
   nav .nav {
@@ -10610,6 +10636,7 @@ section {
 @media (max-width: 574px) {
   .about-section .zoom {
     max-width: 100%;
+    margin-bottom: 35px;
   }
 }
 .about-section .zoom:hover {
@@ -10679,7 +10706,7 @@ section {
 }
 @media (max-width: 768px) {
   .team-section {
-    background-size: 100%;
+    background-size: auto;
   }
 }
 .team-section .col-md-6 {
@@ -10924,7 +10951,8 @@ section {
 }
 
 .metodoyou-page .section-title {
-  font-family: montserrat, sans-serif;
+  font-family: "EncodeSans", sans-serif;
+  font-size: 38px;
 }
 .metodoyou-page .about-section {
   background-color: #fff;
@@ -11129,7 +11157,11 @@ section {
 .contact-page-form-wrapper a {
   color: #262625;
   text-decoration: underline;
-  font-size: 13px;
+}
+@media (max-width: 768px) {
+  .contact-page-form-wrapper a {
+    font-size: 13px;
+  }
 }
 @media (min-width: 768px) {
   .contact-page-form-wrapper {
@@ -11361,4 +11393,165 @@ footer .footer-nav .nav-link:hover, footer .footer-nav .nav-link:focus {
   opacity: 1;
   width: 100%;
 }
+
+/*-----Testimonial-------*/
+.testimonial {
+  min-height: 375px;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-position: center;
+  background-size: cover;
+}
+.testimonial:after {
+  position: absolute;
+  top: 0 !important;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  float: left;
+  z-index: 99;
+}
+
+#testimonial4 .carousel-inner:hover {
+  cursor: -webkit-grab;
+}
+#testimonial4 .carousel-inner:active {
+  cursor: -webkit-grabbing;
+}
+#testimonial4 .carousel-inner .item {
+  overflow: hidden;
+}
+
+.testimonial4_indicators .carousel-indicators {
+  left: 0;
+  margin: 0;
+  width: 100%;
+  font-size: 0;
+  height: 20px;
+  bottom: 15px;
+  padding: 0 5px;
+  cursor: e-resize;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: absolute;
+  text-align: center;
+  white-space: nowrap;
+}
+.testimonial4_indicators .carousel-indicators li {
+  padding: 0;
+  width: 14px;
+  height: 14px;
+  border: none;
+  text-indent: 0;
+  margin: 2px 3px;
+  cursor: pointer;
+  display: inline-block;
+  background: #ffffff;
+  border-radius: 100%;
+}
+.testimonial4_indicators .carousel-indicators .active {
+  padding: 0;
+  width: 14px;
+  height: 14px;
+  border: none;
+  margin: 2px 3px;
+  background-color: #9dd3af;
+  border-radius: 100%;
+}
+.testimonial4_indicators .carousel-indicators::-webkit-scrollbar {
+  height: 3px;
+}
+.testimonial4_indicators .carousel-indicators::-webkit-scrollbar-thumb {
+  background: #eeeeee;
+  border-radius: 0;
+}
+
+.testimonial4_control_button .carousel-control {
+  top: 175px;
+  opacity: 1;
+  width: 40px;
+  bottom: auto;
+  height: 40px;
+  font-size: 10px;
+  cursor: pointer;
+  font-weight: 700;
+  overflow: hidden;
+  line-height: 38px;
+  text-shadow: none;
+  text-align: center;
+  position: absolute;
+  background: transparent;
+  border: 2px solid #ffffff;
+  text-transform: uppercase;
+  border-radius: 100%;
+  box-shadow: none;
+  transition: all 0.6s cubic-bezier(0.3, 1, 0, 1);
+}
+.testimonial4_control_button .carousel-control.left {
+  left: 7%;
+  top: 50%;
+  right: auto;
+}
+.testimonial4_control_button .carousel-control.right {
+  right: 7%;
+  top: 50%;
+  left: auto;
+}
+.testimonial4_control_button .carousel-control.left:hover, .testimonial4_control_button .carousel-control.right:hover {
+  color: #000;
+  background: #fff;
+  border: 2px solid #fff;
+}
+
+.testimonial4_header {
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 550px;
+  display: block;
+  margin: 30px auto;
+  text-align: center;
+  position: relative;
+}
+.testimonial4_header h4 {
+  color: #ffffff;
+  font-size: 30px;
+  font-weight: 600;
+  position: relative;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.testimonial4_slide {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 88%;
+  margin: auto;
+  padding: 20px;
+  position: relative;
+  text-align: center;
+}
+.testimonial4_slide p {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.4;
+  margin: 40px 0 20px 0;
+}
+.testimonial4_slide h4 {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.testimonial .carousel {
+  padding-bottom: 50px;
+}
+.testimonial .carousel-control-next-icon, .testimonial .carousel-control-prev-icon {
+  width: 35px;
+  height: 35px;
+}
+
+/* ------testimonial  close-------*/
 /*# sourceMappingURL=style.css.map */

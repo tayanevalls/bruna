@@ -53,14 +53,9 @@ header.home-header {
     background-position: bottom 50px left 19%;
     background-repeat: no-repeat;
 
-    h1{
+    h2{
         font-weight: 100;
     }
-
-
-
-    
-        
 
     @media (max-width: 767px) {
         background-size: 100% 81px;
@@ -75,6 +70,33 @@ header.home-header {
 }
 
 nav {
+
+    .navbar-dark .navbar-toggler {
+        border-color: transparent;
+        background: #dd4747;
+        outline: none;
+    }
+    #navbarToggleExternalContent ul{
+        list-style: none;
+        margin-bottom: 30px;
+        padding: 0;
+
+        li{
+            a{
+                padding: 1rem 0;
+                border-bottom: 1px solid;
+            }
+        }
+    }
+    .bg-dark{
+        background-color: transparent;
+    }
+
+    .navbar{
+        padding: 0;
+
+
+    }
 
     
     display: flex;

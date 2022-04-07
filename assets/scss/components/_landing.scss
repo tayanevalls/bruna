@@ -108,6 +108,7 @@ section {
     .zoom{
         @media (max-width: 574px) {
             max-width: 100%;
+            margin-bottom: 35px;
         }
         max-width: 380px;
         transition: transform .2s; 
@@ -185,7 +186,7 @@ section {
     background-repeat-y: no-repeat;
 
     @media(max-width: 768px) {
-        background-size: 100%;
+        background-size: auto;
     }
 
     .col-md-6{
@@ -511,7 +512,8 @@ section {
 .metodoyou-page{
 
     .section-title{
-        font-family: montserrat, sans-serif;
+        font-family: 'EncodeSans', sans-serif;
+        font-size: 38px;
     }
 
     .about-section{
