@@ -10607,6 +10607,11 @@ section {
   max-width: 380px;
   transition: transform 0.2s;
 }
+@media (max-width: 574px) {
+  .about-section .zoom {
+    max-width: 100%;
+  }
+}
 .about-section .zoom:hover {
   transform: scale(1.1);
 }
