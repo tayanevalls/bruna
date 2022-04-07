@@ -10814,6 +10814,11 @@ section {
 .contact-section img {
   max-width: 380px;
 }
+@media (max-width: 767px) {
+  .contact-section img {
+    max-width: 100%;
+  }
+}
 .contact-section .contact-social-links .nav-link {
   color: #262625;
   padding: 0 10px 20px 0;
@@ -11124,6 +11129,7 @@ section {
 .contact-page-form-wrapper a {
   color: #262625;
   text-decoration: underline;
+  font-size: 13px;
 }
 @media (min-width: 768px) {
   .contact-page-form-wrapper {
