@@ -11172,6 +11172,9 @@ section {
 .contact-page-form-wrapper .form-group {
   margin-bottom: 42px;
 }
+.contact-page-form-wrapper .form-group .error {
+  font-size: 12px;
+}
 .contact-page-form-wrapper .form-control {
   border: 0;
   border-radius: 0;

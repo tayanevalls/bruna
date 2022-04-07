@@ -31,20 +31,20 @@ $(function() {
   	messages: {
 
 		name:{
-  			required:" <i class='fas fa-exclamation-circle'></i> Campo obrigatório",
+  			required:" <i class='bi bi-exclamation-triangle-fill'></i> Campo obrigatório",
 		  },
 		  phone:{
-			required:" <i class='fas fa-exclamation-circle'></i> Campo obrigatório",
+			required:" <i class='bi bi-exclamation-triangle-fill'></i> Campo obrigatório",
 		},
 		email:{
-			required:" <i class='fas fa-exclamation-circle'></i> Campo obrigatório",
-		  	email: "<i class='fas fa-exclamation-circle'></i>Por favor, insira um e-mail válido."
+			required:" <i class='bi bi-exclamation-triangle-fill'></i> Campo obrigatório",
+		  	email: "<i class='bi bi-exclamation-triangle-fill'></i> Por favor, insira um e-mail válido."
 		},
 		city:{
-			required:" <i class='fas fa-exclamation-circle'></i> Campo obrigatório",
+			required:" <i class='bi bi-exclamation-triangle-fill'></i> Campo obrigatório",
 		},
 		message:{
-			required:" <i class='fas fa-exclamation-circle'></i> Campo obrigatório",
+			required:" <i class='bi bi-exclamation-triangle-fill'></i> Campo obrigatório",
 		},
   	},
   	
