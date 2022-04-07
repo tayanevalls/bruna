@@ -34,17 +34,17 @@ $(function() {
   			required:" <i class='fas fa-exclamation-circle'></i> Campo obrigatório",
 		  },
 		  phone:{
-			required:" <i class='fas fa-exclamation-circle'></i> Campo obrigatóri",
+			required:" <i class='fas fa-exclamation-circle'></i> Campo obrigatório",
 		},
 		email:{
-			required:" <i class='fas fa-exclamation-circle'></i> This field is required.",
-		  	email: "<i class='fas fa-exclamation-circle'></i> Please enter a valid email address."
+			required:" <i class='fas fa-exclamation-circle'></i> Campo obrigatório",
+		  	email: "<i class='fas fa-exclamation-circle'></i>Por favor, insira um e-mail válido."
 		},
 		city:{
-			required:" <i class='fas fa-exclamation-circle'></i> This field is required.",
+			required:" <i class='fas fa-exclamation-circle'></i> Campo obrigatório",
 		},
 		message:{
-			required:" <i class='fas fa-exclamation-circle'></i> This field is required.",
+			required:" <i class='fas fa-exclamation-circle'></i> Campo obrigatório",
 		},
   	},
   	
