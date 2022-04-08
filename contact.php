@@ -1,74 +1,55 @@
 <?php
-
-$url = "https://www.google.com/recaptcha/api/siteverify";
-$respon = $_POST['g-recaptcha-response'];
-
-$data = array('secret' => "6Lcyqb8UAAAAAOCNuYz6LmY9uek3Q7bGYKgpiON-", 'response' => $respon);
-
-$options = array(
-        'http' => array(
-            'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
-            'method'  => 'POST',
-            'content' => http_build_query($data)
-
-        )
-);
-    
-
-if(!isset($_POST[send])) die("<span class='error'>Mensagem não enviada! Tente Novamente</span>");
-/* Medida preventiva para evitar que outros domínios sejam remetente da sua mensagem. */
-if (preg_match('/tempsite.ws$|locaweb.com.br$|hospedagemdesites.ws$|websiteseguro.com$/', $_SERVER[HTTP_HOST])) {
-        $emailsender='tayszane@gmail.com';
-} else {
-        $emailsender = "contato@" . $_SERVER[HTTP_HOST];
-        //    Na linha acima estamos forçando que o remetente seja 'webmaster@seudominio',
-        // você pode alterar para que o remetente seja, por exemplo, 'contato@seudominio'.
-}
+if (isset($_POST['send'])) {
  
-/* Verifica qual é o sistema operacional do servidor para ajustar o cabeçasend-subscribelho de forma correta. Não alterar */
-if(PHP_OS == "Linux") $quebra_linha = "\n"; //Se for Linux
-elseif(PHP_OS == "WINNT") $quebra_linha = "\r\n"; // Se for Windows
-else die("Este script nao esta preparado para funcionar com o sistema operacional de seu servidor");
-// Assign the input values to variables for easy reference
+ //Variaveis de POST, Alterar somente se necessário 
+ //====================================================
+ $name = $_POST['name'];
+ $email = $_POST['email'];
+ $phone = $_POST['phone']; 
+ $city = $_POST['city']; 
+ $message = $_POST['message'];
+ //====================================================
+ 
+ //REMETENTE --> ESTE EMAIL TEM QUE SER VALIDO DO DOMINIO
+ //==================================================== 
+ $email_remetente = "contato@brunadagamaconsultoria.com.br"; // deve ser uma conta de email do seu dominio 
+ //====================================================
+ 
+ //Configurações do email, ajustar conforme necessidade
+ //==================================================== 
+ $email_destinatario = "bgcorreia@gmail.com"; // pode ser qualquer email que receberá as mensagens
+ $email_reply = "$email"; 
+ $email_assunto = "Contato"; // Este será o assunto da mensagem
+ //====================================================
+ 
+ //Monta o Corpo da Mensagem
+ //====================================================
 
 
-$name = $_POST["name"];
-$last = $_POST["last"];
-$email = $_POST["email"];
-$request = $_POST["request"];
-$message = $_POST["message"];
+ $email_conteudo .= "Nome: $name \n"; 
+ $email_conteudo .= "Email: $email \n";
+ $email_conteudo .= "Telefone/Celular: $phone \n"; 
+ $email_conteudo .= "Cidade/Estado: $city \n"; 
+ $email_conteudo .= "Mensagem: $message \n"; 
 
 
-            
-$to = 'info@itcerts.ca';
-			
-$subject = 'Contact';
-
-$headers = "From: " . $email . "\r\n";
-$headers .= "Return-Path: " . $emailsender . "\r\n";
-$headers .= "MIME-Version: 1.0\r\n";
-$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
-
-            // PREPARE THE BODY OF THE MESSAGE
-
-            $message = '<html><body>';
-            $message = '<h2>Contact</h2>';
-            
-			$message .= '<table rules="all" style="border-color: #666;" cellpadding="10">';
-            $message .= "<tr style='background: #eee;'><td><strong>First name:</strong> </td><td>" . strip_tags($_POST['name']) . "</td></tr>";
-            $message .= "<tr style='background: #fff;'><td><strong>Last name:</strong> </td><td>" . strip_tags($_POST['last']) . "</td></tr>";
-            $message .= "<tr style='background: #eee;'><td><strong>Email:</strong> </td><td>" . strip_tags($_POST['email']) . "</td></tr>";
-            $message .= "<tr style='background: #fff;'><td><strong>Request Type:</strong> </td><td>" . strip_tags($_POST['request']) . "</td></tr>";
-            $message .= "<tr style='background: #eee;'><td><strong>Message:</strong> </td><td>" . strip_tags($_POST['message']) . "</td></tr>";
-			$message .= "</table>";
-			$message .= "</body></html>";
-
-
-if(!mail($to, $subject, $message, $headers ,"-r".$emailsender)){ // Se for Postfix
-    $headers .= "Return-Path: " . $emailsender . $quebra_linha; // Se "não for Postfix"
-    mail($to, $subject, $message, $headers );
-}
-
-
-// Die with a success message
-die("<span class='success'><i class='fas fa-check-circle'></i> Thank you! Your message has been successfully sent!</span>");
+ //====================================================
+ 
+ //Seta os Headers (Alterar somente caso necessario) 
+ //==================================================== 
+ $email_headers = 'From:  ' . $name . ' <' . $email .'>' . " \n" ;
+ $email_headers .= "Reply-To: $email_reply". "\n";
+ $email_headers .= "Content-Type: text/html; charset=ISO-8859-1 \n";
+ $email_headers = implode ( "\n",array ("Return-Path: $email_remetente","MIME-Version: 1.0","X-Priority: 1"));
+ //====================================================
+ 
+ //Enviando o email 
+ //==================================================== 
+ if (mail ( $email_destinatario,  $email_assunto,  $email_conteudo,  $email_headers ,"-r".$email_remetente)){ 
+ echo "<span class='success'><i class='bi bi-check2-circle'></i> E-mail enviado com sucesso!</spa>"; 
+ } 
+ else{ 
+ echo "<span class='success'>Falha no envio do E-Mail!</spa>"; } 
+ //====================================================
+} 
+?>

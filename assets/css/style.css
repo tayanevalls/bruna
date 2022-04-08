@@ -10058,7 +10058,7 @@ header.home-header {
   background: #4667A5 url("../images/icone-branco.png");
   font-family: "Caviar Dreams";
   color: #ffffff;
-  background-position: bottom 50px left 32%;
+  background-position: bottom 50px left 33%;
   background-repeat: no-repeat;
 }
 header.home-header.brandyou {
@@ -11158,6 +11158,13 @@ section {
 
 .contact-page-form-wrapper {
   padding-top: 100px;
+}
+.contact-page-form-wrapper .success {
+  background: #fff;
+  padding: 1.3rem;
+  margin-top: 20px;
+  display: block;
+  text-align: center;
 }
 .contact-page-form-wrapper a {
   color: #262625;

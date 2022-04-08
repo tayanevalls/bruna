@@ -345,7 +345,7 @@
                             
                             MétodoYOU.</p>
                         <p>Deixe sua mensagem que retornarei o contato ou envie um email para <a href="mailto:contato@brunadagamaconsultoria.com.br">contato@brunadagamaconsultoria.com.br</a></p>
-                        <form action="index.html" method="post">
+                        <form id="contact-form" action="contact.php" method="post" novalidate="novalidate" class="contact-form" autocomplete="off">
                             <div class="form-group">
                                 <label for="name" class="sr-only">Nome</label>
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Nome*" required>
@@ -355,8 +355,8 @@
                                 <input type="email" class="form-control" id="email" name="email" placeholder="E-mail*" required>
                             </div>
                             <div class="form-group">
-                                <label for="email" class="sr-only">Telefone/Celular</label>
-                                <input type="email" class="form-control" id="fone" name="fone" placeholder="Telefone/Celular*" required>
+                                <label for="phone" class="sr-only">Telefone/Celular</label>
+                                <input type="text" class="form-control" id="phone" name="phone" placeholder="Telefone/Celular*" required>
                             </div>
                             <div class="form-group">
                                 <label for="name" class="sr-only">Cidade / Estado</label>
@@ -368,10 +368,10 @@
                             </div>
                             <div>
                                 <p>Ao informar meus dados, eu concordo com a <a href="" data-toggle="modal" data-target=".politica">Política de Privacidade</a> e com os <a href="" data-toggle="modal" data-target=".termos">Termos de Uso</a>.</p>
-                                <button class="btn-outline" type="Submit">Enviar</button>
+                                <button class="btn-outline" type="submit" name="send" value="send" id="send">Enviar</button>
                             </div>
                         </form>
-
+                        <div id="response-contact"></div>
                     </div>
                 </div>
             </div>
@@ -676,6 +676,9 @@
     <script src="assets/vendors/popper.js/popper.min.js"></script>
     <script src="assets/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.form.js"></script>
+    <script src="assets/js/contact.js"></script>
+    <script src="assets/js/jquery.validate.min.js"></script>
     <script>
         new WOW().init();
     </script>
